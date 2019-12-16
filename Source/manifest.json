@@ -1,0 +1,38 @@
+{
+  "Actions": [
+    {
+      "Icon": "Images/icon",
+      "Name": "UnreadMails",
+      "States": [
+        {
+          "Image": "Images/bg",
+          "TitleAlignment": "bottom",
+          "FontSize": "16"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Tooltip": "Displays unread imap mail count.",
+      "UUID": "cc.xlnt.unreadmails",
+      "PropertyInspectorPath": "PropertyInspector/UnreadMails/Index.html"
+    }
+  ],
+  "Author": "LeGone",
+  "Description": "Displays unread imap mail count.",
+  "Name": "UnreadMails",
+  "Icon": "Images/pluginIcon",
+  "URL": "https://www.xlnt.cc/",
+  "Version": "1.1",
+  "CodePath": "cc.xlnt.unreadmails",
+  "Category": "xLnT",
+  "CategoryIcon": "Images/categoryIcon",
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "4.1"
+  }
+}

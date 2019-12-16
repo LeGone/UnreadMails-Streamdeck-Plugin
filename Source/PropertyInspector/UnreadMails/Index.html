@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <title>xLnT Unread Mails</title>
+    <link rel="stylesheet" href="../sdpi.css">
+</head>
+<body>
+    <div class="sdpi-wrapper">
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Hostname</div>
+            <input class="sdpi-item-value sdProperty" placeholder="imap.xlnt.cc" value="" id="hostname" oninput="setSettings()">
+        </div>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Username</div>
+            <input class="sdpi-item-value sdProperty" placeholder="user@xlnt.cc" value="e" id="username" oninput="setSettings()">
+        </div>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Password</div>
+            <input type="password" class="sdpi-item-value sdProperty" placeholder="" value="" id="password" oninput="setSettings()">
+        </div>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Port</div>
+            <input class="sdpi-item-value sdProperty" placeholder="143" value="143" id="port" oninput="setSettings()">
+        </div>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Interval</div>
+            <input class="sdpi-item-value sdProperty" placeholder="15" value="15" id="interval" oninput="setSettings()">
+        </div>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Auth</div>
+            <select class="sdpi-item-value select sdProperty" id="auth" oninput="setSettings()">
+                <option value="0">Login</option>
+                <option value="1">CRAMMD5</option>
+                <option value="2">SaslOAuth</option>
+            </select>
+        </div>
+
+        <div type="checkbox" class="sdpi-item" id="secure_div">
+            <div class="sdpi-item-label">Secure?</div>
+            <div class="sdpi-item-value">
+                <input id="secure" type="checkbox" value="" class="sdProperty sdCheckbox" oninput="setSettings()">
+                <label for="secure" class="sdpi-item-label"><span></span></label>
+            </div>
+        </div>
+
+        <div type="checkbox" class="sdpi-item" id="skipCertVal_div">
+            <div class="sdpi-item-label">Skip Cert Validating?</div>
+            <div class="sdpi-item-value">
+                <input id="skipCertVal" type="checkbox" value="" class="sdProperty sdCheckbox" oninput="setSettings()">
+                <label for="skipCertVal" class="sdpi-item-label"><span></span></label>
+            </div>
+        </div>
+
+        <div class="sdpi-item" id="dvKeyImage">
+            <div class="sdpi-item-label">Program to open on pressed</div>
+            <div class="sdpi-item-group file" id="filepickergroup">
+                <input class="sdpi-item-value sdProperty sdFile" type="file" id="mailClient" accept=".exe, .bat, .cmd" oninput="setSettings()">
+                <label class="sdpi-file-info " for="mailClient" id="mailClientFilename">No file...</label>
+                <label class="sdpi-file-label" for="mailClient">Choose file...</label>
+            </div>
+        </div>
+    </div>
+    <script src="../sdtools.common.js"></script>
+</body>
+</html>
